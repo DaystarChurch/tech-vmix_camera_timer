@@ -1,0 +1,11 @@
+#active {
+    font-size: 5vh;
+}
+
+#timer {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    font-size: 70vh;
+    line-height: 70vh;
+}

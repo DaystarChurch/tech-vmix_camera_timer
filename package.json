@@ -1,0 +1,23 @@
+{
+  "name": "camera-timer",
+  "version": "1.0.0",
+  "description": "A server that interacts with vMix and provides a shot duration timer via a browser.",
+  "main": "src/cameraTimerServer.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./cameraTimerServer.js localhost",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "concurrently \"export HOSTNAME=127.0.0.1 && node ./cameraTimerServer.js 127.0.0.1\" \"npx opener http://127.0.0.1:3000\" \"node mockVMixServer.js\""
+  },
+  "dependencies": {
+    "ws": "^8.13.0"
+  },
+  "author": "Nathan Gray",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "opener": "^1.5.2",
+    "typescript": "^5.8.3"
+  }
+}
